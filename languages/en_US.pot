@@ -1,0 +1,92 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Very Notification Bar\n"
+"POT-Creation-Date: 2021-08-04 09:14+0300\n"
+"PO-Revision-Date: 2021-08-04 09:14+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: includes/very_notification_bar_function.php:9
+#: includes/very_notification_bar_function.php:31
+msgid "Configurer la barre de notification"
+msgstr "Configure the notification bar"
+
+#: includes/very_notification_bar_function.php:26
+msgid "Modifications enregistrées"
+msgstr "Saved changes"
+
+#: includes/very_notification_bar_function.php:63
+msgid "Configuration générale"
+msgstr "General configuration"
+
+#: includes/very_notification_bar_function.php:69
+msgid "Désactiver / Activer"
+msgstr "Deactivate / Activate"
+
+#: includes/very_notification_bar_function.php:85
+msgid "Configurations de la barre"
+msgstr "Bar configurations"
+
+#: includes/very_notification_bar_function.php:93
+msgid "Couleur de la barre"
+msgstr "Bar color"
+
+#: includes/very_notification_bar_function.php:100
+#: includes/very_notification_bar_function.php:169
+msgid "Texte à afficher"
+msgstr "Text to display"
+
+#: includes/very_notification_bar_function.php:107
+#: includes/very_notification_bar_function.php:190
+msgid "Couleur du texte"
+msgstr "Text color"
+
+#: includes/very_notification_bar_function.php:114
+#: includes/very_notification_bar_function.php:204
+msgid "Police"
+msgstr "Font"
+
+#: includes/very_notification_bar_function.php:121
+msgid "Taille du texte(px)"
+msgstr "Text size(px)"
+
+#: includes/very_notification_bar_function.php:147
+msgid "Configurations du bouton"
+msgstr "Button configuration"
+
+#: includes/very_notification_bar_function.php:155
+msgid "Couleur"
+msgstr "Color"
+
+#: includes/very_notification_bar_function.php:162
+msgid "Couleur au survol"
+msgstr "Hover button color"
+
+#: includes/very_notification_bar_function.php:176
+msgid "Taille de la police(px)"
+msgstr "Font size(px)"
+
+#: includes/very_notification_bar_function.php:183
+msgid "Taille de la marge dans le bouton(px)"
+msgstr "padding size in button"
+
+#: includes/very_notification_bar_function.php:197
+msgid "Couleur du texte au survol"
+msgstr "Hover button color"
+
+#: includes/very_notification_bar_function.php:211
+msgid "Lien"
+msgstr "Link"
+
+#: includes/very_notification_bar_function.php:218
+msgid "Ouvrir le lien dans un nouvel onglet ?"
+msgstr "Open link in new tab ?"
