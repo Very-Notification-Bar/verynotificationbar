@@ -6,7 +6,7 @@ require_once ("field_model.php");
 add_action('admin_menu', 'notification_bar_menu');
 function notification_bar_menu()
 {
-    add_menu_page(__("Configurer la barre de notification", "nb_plugin"), 
+    add_menu_page(__("Configurer la barre de notification", "notification_bar"), 
                     "Very Notification Bar", 
                     "manage_options", 
                     "notification_bar_settings",
@@ -23,12 +23,12 @@ function notification_bar_setting_page()
     //add update message
     if( isset( $_GET['settings-updated'])) 
     {
-        add_settings_error('notification_bar_settings', 'updated_message', __('Modifications enregistrées', 'nb_plugin'), 'updated');
+        add_settings_error('notification_bar_settings', 'updated_message', __('Modifications enregistrées', 'notification_bar'), 'updated');
     }
     settings_errors('notification_bar_settings');
 ?>
     <div class="wrap">
-        <h1> <?php echo _e("Configurer la barre de notification", "nb_plugin") ?> </h1>
+        <h1> <?php echo _e("Configurer la barre de notification", "notification_bar") ?> </h1>
         <form method="POST" action="options.php">
             <?php
                 //return the code to tell the form what to do
@@ -60,13 +60,13 @@ add_action('admin_init', 'general_setting');
 function general_setting()
 {
     add_settings_section("notification_bar_general_setting",
-                            __("Configuration générale : ", "nb_plugin"),
+                            __("Configuration générale : ", "notification_bar"),
                             "",
                             "notification_settings"
                         );
 
     add_settings_field("deactivation_activation",
-                        __("Désactiver / Activer", "nb_plugin"),
+                        __("Désactiver / Activer", "notification_bar"),
                         "display_bar",
                         "notification_settings",
                         "notification_bar_general_setting"
@@ -82,7 +82,7 @@ function notification_bar_settings()
 {
     //save a group section for option related settings, add new sections
     add_settings_section("notification_bar_section",
-                            __("Configurations de la barre : ", "nb_plugin"), 
+                            __("Configurations de la barre : ", "notification_bar"), 
                             "", 
                             "notification_settings" 
                         );
@@ -90,35 +90,35 @@ function notification_bar_settings()
     $tab_fields = array(
             array(
                 "id" => "notification_background_color",
-                "name" => __("Couleur de la barre", "nb_plugin"),
+                "name" => __("Couleur de la barre", "notification_bar"),
                 "function_name" => "bg_color",
                 "setting" => "notification_settings",
                 "section" => "notification_bar_section"
             ),
             array(
                 "id" => "notification_bar_text",
-                "name" => __("Texte à afficher", "nb_plugin"),
+                "name" => __("Texte à afficher", "notification_bar"),
                 "function_name" => "txt_value",
                 "setting" => "notification_settings",
                 "section" => "notification_bar_section"
             ), 
             array(
                 "id" => "notification_text_color",
-                "name" => __("Couleur du texte", "nb_plugin"),
+                "name" => __("Couleur du texte", "notification_bar"),
                 "function_name" => "text_color",
                 "setting" => "notification_settings",
                 "section" => "notification_bar_section"
             ), 
             array(
                 "id" => "text_font",
-                "name" =>__("Police", "nb_plugin"), 
+                "name" =>__("Police", "notification_bar"), 
                 "function_name" => "text_font",
                 "setting" => "notification_settings",
                 "section" => "notification_bar_section"
             ),
             array(
                 "id" => "text_size",
-                "name" => __("Taille du texte (px)", "nb_plugin"), 
+                "name" => __("Taille du texte (px)", "notification_bar"), 
                 "function_name" => "text_size",
                 "setting" => "notification_settings",
                 "section" => "notification_bar_section"
@@ -144,7 +144,7 @@ add_action('admin_init', 'notification_bar_button');
 function notification_bar_button()
 {
     add_settings_section("notification_bar_section_button",
-                            __("Configurations du bouton : ", "nb_plugin"), 
+                            __("Configurations du bouton : ", "notification_bar"), 
                             "", 
                             "notification_settings" 
                         );
@@ -152,70 +152,70 @@ function notification_bar_button()
     $tab_button_fields = array(
         array(
             "id" => "button_bg_color",
-            "name" => __("Couleur", "nb_plugin"), 
+            "name" => __("Couleur", "notification_bar"), 
             "function_name" => "button_color",
             "setting" => "notification_settings",
             "section" => "notification_bar_section_button"
         ),
         array(
             "id" => "button_color_hover",
-            "name" => __("Couleur au survol", "nb_plugin"), 
+            "name" => __("Couleur au survol", "notification_bar"), 
             "function_name" => "button_hover",
             "setting" => "notification_settings",
             "section" => "notification_bar_section_button"
         ),
         array(
             "id" => "text_button",
-            "name" => __("Texte à afficher", "nb_plugin"), 
+            "name" => __("Texte à afficher", "notification_bar"), 
             "function_name" => "button_txt",
             "setting" => "notification_settings",
             "section" => "notification_bar_section_button"
         ),
         array(
             "id" => "size_button",
-            "name" => __("Taille de la police (px)", "nb_plugin"), 
+            "name" => __("Taille de la police (px)", "notification_bar"), 
             "function_name" => "button_size",
             "setting" => "notification_settings",
             "section" => "notification_bar_section_button"
         ),
         array(
             "id" => "padding_button",
-            "name" => __("Taille de la marge dans le bouton (px)", "nb_plugin"), 
+            "name" => __("Taille de la marge dans le bouton (px)", "notification_bar"), 
             "function_name" => "padding_btn",
             "setting" => "notification_settings",
             "section" => "notification_bar_section_button"
         ),
         array(
             "id" => "button_text_color",
-            "name" => __("Couleur du texte", "nb_plugin"), 
+            "name" => __("Couleur du texte", "notification_bar"), 
             "function_name" => "button_text_color",
             "setting" => "notification_settings",
             "section" => "notification_bar_section_button"
         ),
         array(
             "id" => "txt_color_hover",
-            "name" => __("Couleur du texte au survol", "nb_plugin"),
+            "name" => __("Couleur du texte au survol", "notification_bar"),
             "function_name" => "button_txt_hover",
             "setting" => "notification_settings",
             "section" => "notification_bar_section_button"
         ),
         array(
             "id" => "button_font",
-            "name" => __("Police", "nb_plugin"), 
+            "name" => __("Police", "notification_bar"), 
             "function_name" => "button_font",
             "setting" => "notification_settings",
             "section" => "notification_bar_section_button"
         ),
         array(
             "id" => "button_action",
-            "name" => __("Lien", "nb_plugin"),
+            "name" => __("Lien", "notification_bar"),
             "function_name" => "action_button",
             "setting" => "notification_settings",
             "section" => "notification_bar_section_button"
         ),
         array(
             "id" => "link_open_option",
-            "name" => __("Ouvrir le lien dans un nouvel onglet ?", "nb_plugin"),
+            "name" => __("Ouvrir le lien dans un nouvel onglet ?", "notification_bar"),
             "function_name" => "link_option",
             "setting" => "notification_settings",
             "section" => "notification_bar_section_button"
@@ -234,12 +234,6 @@ function notification_bar_button()
             $field['id']
         );
     }
-}
-
-//make plugin multilingual
-add_action('admin_init', 'multilingual_func');
-function multilingual_func(){
-  load_plugin_textdomain( 'nb_plugin', get_template_directory() . '/languages' );
 }
 
 //add fields to setting page
